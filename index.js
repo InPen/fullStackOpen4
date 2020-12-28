@@ -6,6 +6,10 @@ const logger = require('./utils/logger')
 const server = http.createServer(app)
 
 
+const PORT = config.PORT
+server.listen(PORT, () => {
+  logger.info(`Server running on port ${PORT}`)
+})
 
 // const http = require('http')
 // const express = require('express')
@@ -29,9 +33,9 @@ const server = http.createServer(app)
 // app.use(express.json())
 
 
-server.listen(config.PORT, () => {
-  logger.info(`Server running on port ${config.PORT}`)
-})
+// server.listen(config.PORT, () => {
+//   logger.info(`Server running on port ${config.PORT}`)
+// })
 
 // const PORT = 3003
 // app.listen(PORT, () => {
